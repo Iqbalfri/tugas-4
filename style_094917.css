@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  position: fixed;
+  padding: 1.4rem 7%;
+}
+header .logo span {
+  color: red;
+}
+header nav {
+  display: flex;
+  gap: 20px;
+  padding: 1.4rem 7%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 300px;
+}
+header .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+header input[type="text"] {
+  padding: 5px;
+  width: 150px;
+}
+.content {
+  padding: 100px 20px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 300px;
+  background-image: url(torii.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  line-height: 300px;
+  font-size: 24px;
+}
+.product-section {
+  text-align: center;
+}
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.product {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.product img {
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.product button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.trending-product-section {
+  margin: 40px 0;
+  text-align: center;
+}
+.trending-product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.trending-product {
+  width: 15%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.trending-product img {
+  width: 100%;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 40px;
+  border-bottom: 1px solid var(black);
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+  .product-list,
+  .trending-product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product,
+  header .search-bar,
+  .trending-product {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .product-list,
+  header .search-bar,
+  .trending-product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product,
+  .trending-product {
+    width: 80%;
+  }
+}
